@@ -68,6 +68,10 @@ in these languages — a resume listing a stack with an empty/private GitHub wea
   project root (2026-09-05). Property is NOT verified yet — GSC needs the site deployed
   to a live URL first; then verify via the HTML-file method and submit the page.
   Keep this file at the root permanently (removing it loses verification).
+- **Sitemap rule (Jc, 2026-09-05):** `sitemap.xml` exists with ONE page for now — that's
+  fine/valid. **Every time a page is added, add a `<url>` entry to `sitemap.xml` and
+  update these docs.** The `<loc>` is a placeholder; set the real Vercel/custom-domain
+  URL at deploy time (also uncomment the `Sitemap:` line in `robots.txt` then).
 - Canonical, `og:url`, and JSON-LD `url` are commented placeholders until Jc has a domain;
   `robots.txt` has a commented `Sitemap:` line for the same moment.
 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!--
+    SITEMAP POLICY (see MEMORY.md):
+    This site currently has ONE page. Every time a new page is added,
+    add a matching <url> entry here (and update the docs).
+    The <loc> below is a placeholder — replace it with the real live URL
+    (Vercel URL, or the custom domain once Jc has one) at deploy time.
+  -->
+  <url>
+    <loc>https://REPLACE-WITH-LIVE-URL/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>

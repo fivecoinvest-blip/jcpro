@@ -57,5 +57,6 @@ Allow: /
 User-agent: Instagram
 Allow: /
 
-# ---- Future: add this line once a domain is live ----
-# Sitemap: https://yourdomain.com/sitemap.xml
+# ---- Sitemap: enable + set the real URL once the site is live ----
+# sitemap.xml exists at the root (one page right now — grows as pages are added)
+# Sitemap: https://REPLACE-WITH-LIVE-URL/sitemap.xml

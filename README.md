@@ -12,6 +12,7 @@ no external fonts, no build step. Opens offline from disk.
 | --------------- | -------------------------------------------------------------- |
 | `index.html`    | The entire website (single file)                               |
 | `robots.txt`    | Allows all search engines & social crawlers to index the site  |
+| `sitemap.xml`    | XML sitemap (one page now — **add an entry every time a page is added**) |
 | `google97b4534637462aa1.html` | Google Search Console ownership verification (keep at root) |
 | `README.md`     | This overview                                                  |
 | `MEMORY.md`     | Project memory — facts, decisions, conventions (read first)    |

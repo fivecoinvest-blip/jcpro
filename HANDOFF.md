@@ -10,10 +10,13 @@
 
 ## Pending local changes
 
-Just committed and about to be pushed (awaiting this push):
+NOT yet pushed (waiting for Jc's "push to github"):
 
-- `google97b4534637462aa1.html` — **new**: Google Search Console verification file (root)
-- `README.md` / `MEMORY.md` / `HANDOFF.md` — updated to match
+- `sitemap.xml` — **new**: one-page sitemap (placeholder URL to finalize at deploy)
+- `robots.txt` — updated `Sitemap:` comment to match
+- `README.md` / `MEMORY.md` / `HANDOFF.md` — sitemap rule recorded
+
+(Note: previous batch incl. `google97b4534637462aa1.html` was already pushed as `a3734b3`.)
 
 ## Where the project stands
 
@@ -40,7 +43,8 @@ GitHub yet (folder is **not** a git repo).
 | 13 | Push code to `fivecoinvest-blip/jcpro` | ✅ Done | Pushed 2026-09-05, branch `main`, commit `26c073c` (author Jc). Repo created via GitHub API, now at https://github.com/fivecoinvest-blip/jcpro. Files: `index.html`, `README.md`, `MEMORY.md`, `HANDOFF.md`, `preview/` |
 | 14 | Optional: delete `preview/` before deploy | ⏳ Pending | ~4 MB review-only PNGs |
 | 15 | Optional: projects section / real work samples | ⏳ Future | Backs up the claimed stack; Jc has none listed yet |
-| 16 | Google Search Console: verify + get indexed | ⏳ Pending | File `google97b4534637462aa1.html` at root (pushed). Needs: site live on Vercel → verify property (URL-prefix, HTML-file method) → URL Inspection "Request indexing" → add sitemap once a domain exists |
+| 16 | Google Search Console: verify + get indexed | ⏳ Pending | File `google97b4534637462aa1.html` at root (pushed). Needs: site live on Vercel → verify property (URL-prefix, HTML-file method) → URL Inspection "Request indexing" → submit sitemap (see #17) |
+| 17 | Sitemap: set live URL + submit | ⏳ Pending | `sitemap.xml` exists (one page, placeholder `<loc>`). At deploy: replace `<loc>` with real URL, uncomment `Sitemap:` in `robots.txt`, submit in GSC. **Future rule: every new page → add `<url>` + update docs** |
 
 ## Next session — suggested starting point
 
