@@ -25,8 +25,8 @@ GitHub yet (folder is **not** a git repo).
 | 9 | LinkedIn URL wired into contact button | ⏳ Pending | Awaiting URL from Jc |
 | 10 | Domain added (canonical/`og:url`/JSON-LD `url`) | ⏳ Pending | Jc: "domain later" |
 | 11 | Live preview in browser before deploy | ⏳ Pending | **Workspace ≠ Jc's machine** → must use ngrok public link or deploy; localhost never worked |
-| 12 | Deploy to a free static host (permanent URL) | ⏳ Pending | **Vercel chosen by Jc (2026-09-05).** Import `jcpro` at vercel.com → framework "Other" → no build → Deploy. Local repo ready first |
-| 13 | Push code to `fivecoinvest-blip/jcpro` | ⏳ Pending | **Jc will push from his own machine** (no token shared in chat). Repo `jcpro` did NOT exist at last check (GitHub 404) — must create it empty first. Local repo already: branch `main`, commit `94cad8b`, author Jc. Files: `index.html`, `README.md`, `MEMORY.md`, `HANDOFF.md`, `preview/` (4 PNGs, committed intentionally) |
+| 12 | Deploy to a free static host (permanent URL) | ⏳ Pending | **Vercel chosen by Jc (2026-09-05).** Import `fivecoinvest-blip/jcpro` at vercel.com → framework "Other" (no build needed) → Deploy. Then share the live URL |
+| 13 | Push code to `fivecoinvest-blip/jcpro` | ✅ Done | Pushed 2026-09-05, branch `main`, commit `26c073c` (author Jc). Repo created via GitHub API, now at https://github.com/fivecoinvest-blip/jcpro. Files: `index.html`, `README.md`, `MEMORY.md`, `HANDOFF.md`, `preview/` |
 | 14 | Optional: delete `preview/` before deploy | ⏳ Pending | ~4 MB review-only PNGs |
 | 15 | Optional: projects section / real work samples | ⏳ Future | Backs up the claimed stack; Jc has none listed yet |
 
@@ -54,6 +54,4 @@ GitHub yet (folder is **not** a git repo).
   Widths: 1280 = desktop, 390 = phone; make height very tall for full-page captures.
   Light theme requires bootstrapping `localStorage.theme = "light"` first (small redirect
   page trick) because the site defaults to dark.
-- **Verification:** validate inline `<script>` blocks (JSON-LD block is JSON, not JS —
-  parse it with `JSON.parse`, not `new Function`) and keep HTML comments balanced
-  (a `*/` typo in an HTML comment once swallowed the rest of `<head>`).
+- **Credentials / token hygiene:** a fine-grained PAT (`github_pat_…`) from Jc was used once to create + push `jcpro`. It was never written to any file or git config (remote stays a clean HTTPS URL), but it **was pasted into chat**, so Jc should **revoke it** under GitHub → Settings → Developer settings → Fine-grained personal access tokens. Mint a fresh one if another push is ever needed. Also note: fine-grained PATs CAN create repos via the API — this is how `jcpro` was made.
