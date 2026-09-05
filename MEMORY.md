@@ -64,6 +64,10 @@ in these languages — a resume listing a stack with an empty/private GitHub wea
 - `robots.txt` at project root allows all crawlers — search engines (Googlebot, Bingbot,
   DuckDuckBot, Yandex, Baiduspider, Applebot) plus social/messaging bots (Facebook,
   Twitterbot, LinkedInBot, WhatsApp, Pinterest, Slack, Discord, Telegram, Instagram).
+- **Google Search Console:** verification file `google97b4534637462aa1.html` sits at the
+  project root (2026-09-05). Property is NOT verified yet — GSC needs the site deployed
+  to a live URL first; then verify via the HTML-file method and submit the page.
+  Keep this file at the root permanently (removing it loses verification).
 - Canonical, `og:url`, and JSON-LD `url` are commented placeholders until Jc has a domain;
   `robots.txt` has a commented `Sitemap:` line for the same moment.
 

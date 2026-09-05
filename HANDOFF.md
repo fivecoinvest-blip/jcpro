@@ -10,8 +10,10 @@
 
 ## Pending local changes
 
-**None.** Everything is pushed. Last sync with GitHub: commit `52a1a17`
-(robots.txt + robots meta upgrade, 2026-09-05).
+Just committed and about to be pushed (awaiting this push):
+
+- `google97b4534637462aa1.html` — **new**: Google Search Console verification file (root)
+- `README.md` / `MEMORY.md` / `HANDOFF.md` — updated to match
 
 ## Where the project stands
 
@@ -38,6 +40,7 @@ GitHub yet (folder is **not** a git repo).
 | 13 | Push code to `fivecoinvest-blip/jcpro` | ✅ Done | Pushed 2026-09-05, branch `main`, commit `26c073c` (author Jc). Repo created via GitHub API, now at https://github.com/fivecoinvest-blip/jcpro. Files: `index.html`, `README.md`, `MEMORY.md`, `HANDOFF.md`, `preview/` |
 | 14 | Optional: delete `preview/` before deploy | ⏳ Pending | ~4 MB review-only PNGs |
 | 15 | Optional: projects section / real work samples | ⏳ Future | Backs up the claimed stack; Jc has none listed yet |
+| 16 | Google Search Console: verify + get indexed | ⏳ Pending | File `google97b4534637462aa1.html` at root (pushed). Needs: site live on Vercel → verify property (URL-prefix, HTML-file method) → URL Inspection "Request indexing" → add sitemap once a domain exists |
 
 ## Next session — suggested starting point
 
