@@ -25,8 +25,8 @@ GitHub yet (folder is **not** a git repo).
 | 9 | LinkedIn URL wired into contact button | ⏳ Pending | Awaiting URL from Jc |
 | 10 | Domain added (canonical/`og:url`/JSON-LD `url`) | ⏳ Pending | Jc: "domain later" |
 | 11 | Live preview in browser before deploy | ⏳ Pending | **Workspace ≠ Jc's machine** → must use ngrok public link or deploy; localhost never worked |
-| 12 | Deploy to a free static host (permanent URL) | ⏳ Pending | Needs host choice + account/auth; candidate: GitHub Pages (fits existing repo) |
-| 13 | Push code to `fivecoinvest-blip/jcpro` | ⏳ Pending | Needs explicit user authorization to `git push`; also decide `preview/` inclusion |
+| 12 | Deploy to a free static host (permanent URL) | ⏳ Pending | **Vercel chosen by Jc (2026-09-05).** Import `jcpro` at vercel.com → framework "Other" → no build → Deploy. Local repo ready first |
+| 13 | Push code to `fivecoinvest-blip/jcpro` | ⏳ Pending | **Jc will push from his own machine** (no token shared in chat). Repo `jcpro` did NOT exist at last check (GitHub 404) — must create it empty first. Local repo already: branch `main`, commit `94cad8b`, author Jc. Files: `index.html`, `README.md`, `MEMORY.md`, `HANDOFF.md`, `preview/` (4 PNGs, committed intentionally) |
 | 14 | Optional: delete `preview/` before deploy | ⏳ Pending | ~4 MB review-only PNGs |
 | 15 | Optional: projects section / real work samples | ⏳ Future | Backs up the claimed stack; Jc has none listed yet |
 
