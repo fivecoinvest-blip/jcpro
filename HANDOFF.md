@@ -10,13 +10,8 @@
 
 ## Pending local changes
 
-NOT yet pushed (waiting for Jc's "push to github"):
-
-- `sitemap.xml` — **new**: one-page sitemap (placeholder URL to finalize at deploy)
-- `robots.txt` — updated `Sitemap:` comment to match
-- `README.md` / `MEMORY.md` / `HANDOFF.md` — sitemap rule recorded
-
-(Note: previous batch incl. `google97b4534637462aa1.html` was already pushed as `a3734b3`.)
+**None.** Everything is pushed. Last sync with GitHub: commit `953bf1f`
+(sitemap.xml + robots.txt/doc updates, 2026-09-05).
 
 ## Where the project stands
 
