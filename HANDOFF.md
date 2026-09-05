@@ -8,17 +8,10 @@
 > (README/MEMORY/HANDOFF), and GitHub pushes happen **only** when Jc explicitly says
 > "push to github". See "Pending local changes" below for what is NOT yet pushed.
 
-## Pending local changes (not yet pushed)
+## Pending local changes
 
-Last sync with GitHub: commit `fb154d8` (2026-09-05). Uncommitted locally since then:
-
-- `robots.txt` — new: allows all search engines + social/messaging crawlers to index
-- `index.html` — robots meta upgraded to `index, follow, max-image-preview:large`
-- `README.md` — file table now lists `robots.txt`
-- `MEMORY.md` — SEO section updated + "Working agreement" added
-- `HANDOFF.md` — this file
-
-→ Push when Jc says the word.
+**None.** Everything is pushed. Last sync with GitHub: commit `52a1a17`
+(robots.txt + robots meta upgrade, 2026-09-05).
 
 ## Where the project stands
 
