@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jc — Full-Stack Developer | Resume</title>
+  <meta name="robots" content="noindex" />
+  <meta name="description" content="Resume of Jc — Full-Stack Developer: web, iOS & Android, backend, databases, servers, AI-assisted development and SEO." />
+
+  <script>
+    (function () {
+      var theme = "dark";
+      try {
+        var saved = localStorage.getItem("resume-theme");
+        if (saved === "light" || saved === "dark") theme = saved;
+      } catch (e) {}
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #070b14;
+      --surface: #0f172a;
+      --surface-2: #131d33;
+      --border: rgba(148, 163, 184, 0.18);
+      --border-strong: rgba(148, 163, 184, 0.34);
+      --text: #e6edf6;
+      --text-soft: #9aa9bc;
+      --text-faint: #64748b;
+      --accent: #22d3ee;
+      --accent-2: #818cf8;
+      --accent-ink: #061a21;
+      --grad: linear-gradient(120deg, #22d3ee, #818cf8);
+      --chip-bg: rgba(34, 211, 238, 0.07);
+      --ok: #34d399;
+    }
+    :root[data-theme="light"] {
+      color-scheme: light;
+      --bg: #eef2f7;
+      --surface: #ffffff;
+      --surface-2: #f2f6fb;
+      --border: rgba(15, 23, 42, 0.14);
+      --border-strong: rgba(15, 23, 42, 0.3);
+      --text: #0f172a;
+      --text-soft: #475569;
+      --text-faint: #64748b;
+      --accent: #0891b2;
+      --accent-2: #6366f1;
+      --accent-ink: #ffffff;
+      --grad: linear-gradient(120deg, #0891b2, #6366f1);
+      --chip-bg: rgba(8, 145, 178, 0.08);
+      --ok: #059669;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.45;
+    }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    a { color: inherit; text-decoration: none; }
+
+    @page { size: A4; margin: 0; }
+
+    /* on-screen viewer: centered sheet */
+    .stage { padding: 28px 12px; }
+    .sheet {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: var(--surface);
+      color: var(--text);
+      padding: 9mm 11.5mm 7.5mm;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.7);
+    }
+
+    /* theme toggle (screen only) */
+    .toggle {
+      position: fixed; top: 14px; right: 14px; z-index: 50;
+      display: inline-grid; place-items: center;
+      width: 40px; height: 40px; border-radius: 11px;
+      border: 1px solid var(--border); background: var(--surface);
+      color: var(--text-soft); cursor: pointer;
+    }
+    .toggle svg { width: 19px; height: 19px; }
+    [data-theme="dark"] .icon-sun { display: block; }
+    [data-theme="dark"] .icon-moon { display: none; }
+    [data-theme="light"] .icon-sun { display: none; }
+    [data-theme="light"] .icon-moon { display: block; }
+
+    /* subtle corner decorations */
+    .sheet::before {
+      content: ""; position: absolute; inset: 0;
+      background:
+        radial-gradient(340px 200px at 88% -40px, rgba(34, 211, 238, 0.12), transparent 70%),
+        radial-gradient(300px 200px at -10% 108%, rgba(129, 140, 248, 0.1), transparent 70%);
+      pointer-events: none;
+    }
+
+    /* ---------- header ---------- */
+    .head { display: flex; align-items: flex-start; justify-content: space-between; gap: 8mm; border-bottom: 1px solid var(--border); padding-bottom: 4.6mm; margin-bottom: 4.6mm; }
+    .kicker { font-size: 7.2pt; color: var(--accent); letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 1.2mm; }
+    .name {
+      font-size: 23pt; font-weight: 800; line-height: 1.02; letter-spacing: -0.02em;
+      background: var(--grad);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
+    }
+    .role { margin-top: 1.2mm; font-size: 9pt; color: var(--text-soft); font-weight: 500; }
+    .role b { color: var(--accent); font-weight: 600; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 2mm;
+      border: 1px solid var(--border); border-radius: 999px;
+      padding: 1.6mm 3.5mm; white-space: nowrap;
+      font-size: 7.4pt; color: var(--text-soft);
+      background: var(--surface-2);
+    }
+    .dot { width: 6.5px; height: 6.5px; border-radius: 50%; background: var(--ok); }
+
+    .contacts { margin-top: 2.6mm; display: flex; flex-wrap: wrap; gap: 1.6mm 4.5mm; }
+    .contacts a, .contacts span { display: inline-flex; align-items: center; gap: 1.6mm; font-size: 8pt; color: var(--text-soft); }
+    .contacts a:hover { color: var(--accent); }
+    .contacts svg { width: 9px; height: 9px; flex: none; }
+    .contacts .c { color: var(--text-faint); }
+
+    /* ---------- blocks ---------- */
+    .block { margin-bottom: 4.2mm; }
+    .label {
+      font-family: ui-monospace, monospace; font-size: 7.3pt;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 2.2mm;
+      display: flex; align-items: center; gap: 2.6mm;
+    }
+    .label::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+    .label .n { color: var(--text-faint); margin-right: 0; }
+
+    .summary p { font-size: 8.4pt; color: var(--text-soft); line-height: 1.42; margin-bottom: 1.4mm; }
+    .summary p:last-child { margin-bottom: 0; }
+    .summary strong { color: var(--text); font-weight: 600; }
+    p.summary strong { color: var(--text); font-weight: 600; }
+
+    /* ---------- skills ---------- */
+    .skill-row { display: flex; align-items: baseline; gap: 3mm; margin-bottom: 1.6mm; }
+    .skill-row .k { flex: none; width: 40mm; font-size: 7.4pt; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em; }
+    .chips { flex: 1; display: flex; flex-wrap: wrap; gap: 1.4mm 1.8mm; }
+    .chip {
+      padding: 0.7mm 2.4mm; border-radius: 999px;
+      background: var(--chip-bg); border: 1px solid transparent;
+      color: var(--text-soft); font-size: 7.3pt;
+    }
+    .chip.hl { border-color: rgba(34, 211, 238, 0.35); color: var(--text); }
+    :root[data-theme="light"] .chip.hl { border-color: rgba(8, 145, 178, 0.35); }
+
+    /* ---------- two columns ---------- */
+    .cols { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 5.5mm; }
+    .col h3 {
+      font-size: 7.8pt; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--text-faint); margin-bottom: 2.2mm;
+    }
+    ul.tight { list-style: none; }
+    ul.tight li {
+      position: relative; padding-left: 4mm;
+      font-size: 8pt; color: var(--text-soft); margin-bottom: 1.5mm; line-height: 1.4;
+    }
+    ul.tight li::before { content: "→"; position: absolute; left: 0; top: 0; font-family: ui-monospace, monospace; color: var(--accent); font-size: 8pt; }
+    ul.tight li strong { color: var(--text); font-weight: 600; }
+
+    .pipeline {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 1.2mm 2.2mm;
+      border: 1px solid var(--border); border-radius: 3mm;
+      padding: 2.4mm 3.5mm; background: var(--surface-2);
+    }
+    .pipeline span { font-family: ui-monospace, monospace; font-size: 7.4pt; color: var(--text-soft); }
+    .pipeline .arr { color: var(--accent); font-size: 8pt; }
+
+    .quote {
+      border-left: 2.2px solid var(--accent); padding: 0.8mm 0 0.8mm 3.2mm;
+      font-size: 8.2pt; color: var(--text); font-weight: 600; line-height: 1.5;
+    }
+    .quote small { display: block; font-weight: 400; color: var(--text-faint); font-size: 7.2pt; margin-top: 1mm; }
+
+    .foot {
+      margin-top: 4mm; padding-top: 3mm; border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center; gap: 4mm;
+    }
+    .foot p { font-size: 7.6pt; color: var(--text-faint); }
+    .foot .mono { color: var(--text-soft); }
+    .foot a { color: var(--accent); }
+
+    /* ---------- print ---------- */
+    @media print {
+      body { background: var(--surface); }
+      .stage { padding: 0; }
+      .sheet { box-shadow: none; width: 210mm; min-height: auto; }
+      .toggle { display: none; }
+      .block { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle" id="theme-toggle" type="button" aria-label="Toggle light and dark theme">
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5 5l1.6 1.6M17.4 17.4L19 19M19 5l-1.6 1.6M6.6 17.4L5 19"/></svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 14.2A8.5 8.5 0 0 1 9.8 3.4a8.5 8.5 0 1 0 10.8 10.8z"/></svg>
+  </button>
+
+  <div class="stage">
+    <div class="sheet">
+
+      <!-- ===== Header ===== -->
+      <header class="head">
+        <div>
+          <p class="kicker mono">Résumé — Full-Stack Developer</p>
+          <h1 class="name">Jc</h1>
+          <p class="role">Full-Stack Developer — <b>Web, iOS &amp; Android</b> · Backend · Databases · Server &amp; Deployment · <b>AI-Assisted</b> · SEO</p>
+          <div class="contacts">
+            <a href="mailto:jcbloggerjc@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+              jcbloggerjc@gmail.com
+            </a>
+            <span class="c">·</span>
+            <a href="https://github.com/fivecoinvest-blip" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.66.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .31.21.67.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+              /fivecoinvest-blip
+            </a>
+          </div>
+        </div>
+        <span class="badge mono"><span class="dot"></span> Available for projects</span>
+      </header>
+
+      <!-- ===== Summary ===== -->
+      <section class="block">
+        <p class="label"><span class="n mono">01</span>Profile</p>
+        <div class="summary">
+          <p><strong>End-to-end full-stack:</strong> frontend → backend → databases → APIs → servers → deployment → iOS &amp; Android, built as one system.</p>
+          <p><strong>Fast learner:</strong> at home in existing codebases and quick to pick up new languages, frameworks and environments.</p>
+          <p><strong>SEO trained:</strong> professional SEO background — every build is discoverable, fast and technically sound.</p>
+          <p><strong>AI-augmented:</strong> deep coding knowledge means AI agents are guided and reviewed — never blindly trusted.</p>
+        </div>
+      </section>
+
+      <!-- ===== Tech stack ===== -->
+      <section class="block">
+        <p class="label"><span class="n mono">02</span>Tech Stack</p>
+        <div class="skill-row"><span class="k mono">Languages</span><div class="chips"><span class="chip hl">JavaScript</span><span class="chip hl">TypeScript</span><span class="chip">Python</span><span class="chip">PHP</span><span class="chip">Java</span><span class="chip">Go</span><span class="chip">Swift</span><span class="chip">Kotlin</span><span class="chip">SQL</span><span class="chip">HTML5 / CSS3</span></div></div>
+        <div class="skill-row"><span class="k mono">Frontend</span><div class="chips"><span class="chip hl">React</span><span class="chip hl">Next.js</span><span class="chip">Vue</span><span class="chip">Angular</span><span class="chip">Tailwind CSS</span><span class="chip">Responsive web</span></div></div>
+        <div class="skill-row"><span class="k mono">Backend</span><div class="chips"><span class="chip hl">Node.js</span><span class="chip hl">Express</span><span class="chip">Laravel</span><span class="chip">Django</span><span class="chip">Flask</span><span class="chip">REST APIs</span><span class="chip">Auth &amp; user mgmt</span><span class="chip">3rd-party APIs</span></div></div>
+        <div class="skill-row"><span class="k mono">Databases</span><div class="chips"><span class="chip hl">MySQL</span><span class="chip hl">PostgreSQL</span><span class="chip">MongoDB</span><span class="chip">Firebase</span><span class="chip">SQLite</span><span class="chip">Redis</span><span class="chip">Data modeling</span><span class="chip">Optimization</span></div></div>
+        <div class="skill-row"><span class="k mono">Mobile</span><div class="chips"><span class="chip hl">iOS (Swift)</span><span class="chip hl">Android (Kotlin)</span><span class="chip">Cross-device responsive</span></div></div>
+        <div class="skill-row"><span class="k mono">Server &amp; DevOps</span><div class="chips"><span class="chip">Linux servers</span><span class="chip">Web server config</span><span class="chip">DNS / SSL / HTTPS</span><span class="chip">Deployment</span><span class="chip">Docker</span><span class="chip">Git &amp; GitHub</span><span class="chip">WordPress</span><span class="chip">Backups &amp; maintenance</span></div></div>
+        <div class="skill-row"><span class="k mono">AI &amp; SEO</span><div class="chips"><span class="chip">Cursor</span><span class="chip">GitHub Copilot</span><span class="chip">AI coding agents</span><span class="chip">Code review &amp; testing</span><span class="chip">On-page SEO</span><span class="chip">Technical SEO</span><span class="chip">Structured data</span><span class="chip">Search Console</span></div></div>
+      </section>
+
+      <!-- ===== Deliver + approach ===== -->
+      <div class="cols">
+        <section class="block col">
+          <p class="label"><span class="n mono">03</span>What I Deliver</p>
+          <ul class="tight">
+            <li><strong>Full-stack web apps</strong> — frontend + backend + API + database as one system</li>
+            <li><strong>iOS &amp; Android applications</strong> — responsive, practical, easy to use</li>
+            <li><strong>REST APIs, authentication</strong>, business logic &amp; third-party integrations</li>
+            <li><strong>Database design</strong> — modeling, SQL, CRUD, reporting, optimization</li>
+            <li><strong>Admin dashboards, portals, e-commerce</strong> &amp; custom business systems</li>
+            <li><strong>Server &amp; deployment</strong> — setup, DNS, SSL, Linux, production go-live</li>
+            <li><strong>Maintenance, bug fixing</strong> &amp; working with existing codebases</li>
+            <li><strong>SEO built-in</strong> — audits, structure, metadata &amp; performance</li>
+          </ul>
+        </section>
+        <section class="block col">
+          <p class="label"><span class="n mono">04</span>How I Work</p>
+          <ul class="tight">
+            <li><strong>End-to-end ownership:</strong> from idea and database to deployed product</li>
+            <li><strong>AI-assisted development:</strong> guide Cursor / Copilot, then review, test &amp; debug</li>
+            <li><strong>Clear communication</strong> and reliable delivery of the technical side</li>
+            <li><strong>Adaptable:</strong> new languages, frameworks and environments — quickly</li>
+            <li><strong>Quality-first:</strong> fast, maintainable, performant, SEO-sound builds</li>
+          </ul>
+          <p class="quote" style="margin-top: 2.4mm;">"AI is not a replacement for programming knowledge — it's a tool that makes a knowledgeable developer more productive."
+            <small>— my working philosophy</small>
+          </p>
+        </section>
+      </div>
+
+      <!-- ===== Pipeline ===== -->
+      <section class="block">
+        <p class="label"><span class="n mono">05</span>Full-Cycle Delivery</p>
+        <div class="pipeline">
+          <span>Development</span><span class="arr">→</span>
+          <span>Database</span><span class="arr">→</span>
+          <span>Backend / API</span><span class="arr">→</span>
+          <span>Server</span><span class="arr">→</span>
+          <span>Deployment</span><span class="arr">→</span>
+          <span>Maintenance</span>
+        </div>
+      </section>
+
+      <!-- ===== Footer ===== -->
+      <footer class="foot">
+        <p class="mono">~/jc — full-stack developer</p>
+        <p>Available for freelance &amp; contract work · <a href="mailto:jcbloggerjc@gmail.com">jcbloggerjc@gmail.com</a></p>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      "use strict";
+      var toggle = document.getElementById("theme-toggle");
+      if (toggle) {
+        toggle.addEventListener("click", function () {
+          var doc = document.documentElement;
+          var next = doc.getAttribute("data-theme") === "light" ? "dark" : "light";
+          doc.setAttribute("data-theme", next);
+          try { localStorage.setItem("resume-theme", next); } catch (e) {}
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

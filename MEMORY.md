@@ -42,6 +42,8 @@ in these languages — a resume listing a stack with an empty/private GitHub wea
 
 - **Single file** `index.html` (~47 KB) — inline CSS + JS, system font stack, inline SVG
   icons + favicon. No external requests. This is deliberate (speed-first).
+  (The résumé is a second page `resume.html`, linked from `index.html` — the main site
+  itself stays a single page; resume.html is marked `noindex`.)
 - **Theme:** dark by default; light/dark toggle in header; saved to `localStorage`;
   applied via a tiny `<head>` script **before first paint** (no flash).
 - **Colors:** accent gradient cyan→indigo. Dark: `--accent #22d3ee`, `--accent-2 #818cf8`,
@@ -72,6 +74,13 @@ in these languages — a resume listing a stack with an empty/private GitHub wea
   fine/valid. **Every time a page is added, add a `<url>` entry to `sitemap.xml` and
   update these docs.** The `<loc>` is a placeholder; set the real Vercel/custom-domain
   URL at deploy time (also uncomment the `Sitemap:` line in `robots.txt` then).
+- **Résumé download (2026-09-05):** `resume.html` is an A4 résumé that mirrors the site's
+  design (same dark/light tokens, gradients, chips; own theme toggle using
+  `localStorage["resume-theme"]`). `resume.pdf` is generated from it via
+  `bash make-resume-pdf.sh` (headless Chrome `--print-to-pdf`, one A4 page, no
+  header/footer). `index.html` links to `resume.pdf` in the hero and contact sections.
+  **Rule: whenever resume content/design changes, rerun the script so the PDF stays in
+  sync.** PDF verified: 1 A4 page, margins top ~9mm / bottom ~23mm / sides ~11.6mm.
 - Canonical, `og:url`, and JSON-LD `url` are commented placeholders until Jc has a domain;
   `robots.txt` has a commented `Sitemap:` line for the same moment.
 

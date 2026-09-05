@@ -11,6 +11,9 @@ no external fonts, no build step. Opens offline from disk.
 | File            | Purpose                                                        |
 | --------------- | -------------------------------------------------------------- |
 | `index.html`    | The entire website (single file)                               |
+| `resume.html`   | Résumé page — A4, styled like the site (toggle dark/light)     |
+| `resume.pdf`    | Downloadable PDF of the résumé (generated from `resume.html`)  |
+| `make-resume-pdf.sh` | Regenerates `resume.pdf` after editing `resume.html`      |
 | `robots.txt`    | Allows all search engines & social crawlers to index the site  |
 | `sitemap.xml`    | XML sitemap (one page now — **add an entry every time a page is added**) |
 | `google97b4534637462aa1.html` | Google Search Console ownership verification (keep at root) |

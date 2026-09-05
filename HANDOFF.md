@@ -10,8 +10,14 @@
 
 ## Pending local changes
 
-**None.** Everything is pushed. Last sync with GitHub: commit `953bf1f`
-(sitemap.xml + robots.txt/doc updates, 2026-09-05).
+NOT yet pushed (waiting for Jc's "push to github"):
+
+- `resume.html` — **new**: A4 résumé styled like the site
+- `resume.pdf` — **new**: generated 1-page PDF (verified)
+- `make-resume-pdf.sh` — **new**: PDF regeneration script
+- `index.html` — "Résumé (PDF)" buttons added (hero + contact)
+- `preview/preview-resume-pdf-1.png` — **new**: PDF preview image
+- `README.md` / `MEMORY.md` / `HANDOFF.md` — updated to match
 
 ## Where the project stands
 
@@ -40,6 +46,7 @@ GitHub yet (folder is **not** a git repo).
 | 15 | Optional: projects section / real work samples | ⏳ Future | Backs up the claimed stack; Jc has none listed yet |
 | 16 | Google Search Console: verify + get indexed | ⏳ Pending | File `google97b4534637462aa1.html` at root (pushed). Needs: site live on Vercel → verify property (URL-prefix, HTML-file method) → URL Inspection "Request indexing" → submit sitemap (see #17) |
 | 17 | Sitemap: set live URL + submit | ⏳ Pending | `sitemap.xml` exists (one page, placeholder `<loc>`). At deploy: replace `<loc>` with real URL, uncomment `Sitemap:` in `robots.txt`, submit in GSC. **Future rule: every new page → add `<url>` + update docs** |
+| 18 | Downloadable résumé (site-styled PDF) | ✅ Done | `resume.html` + generated `resume.pdf` (1 A4 page, verified margins). Buttons on index hero + contact. **Regenerate PDF via `bash make-resume-pdf.sh` whenever resume.html changes** |
 
 ## Next session — suggested starting point
 
