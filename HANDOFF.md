@@ -10,14 +10,8 @@
 
 ## Pending local changes
 
-NOT yet pushed (waiting for Jc's "push to github"):
-
-- `resume.html` — **new**: A4 résumé styled like the site
-- `resume.pdf` — **new**: generated 1-page PDF (verified)
-- `make-resume-pdf.sh` — **new**: PDF regeneration script
-- `index.html` — "Résumé (PDF)" buttons added (hero + contact)
-- `preview/preview-resume-pdf-1.png` — **new**: PDF preview image
-- `README.md` / `MEMORY.md` / `HANDOFF.md` — updated to match
+**None.** Everything is pushed. Last sync with GitHub: commit `ca191ec`
+(site-styled résumé HTML + PDF + Download buttons, 2026-09-05).
 
 ## Where the project stands
 
