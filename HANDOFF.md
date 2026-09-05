@@ -3,6 +3,22 @@
 > How to use: at the start of a session read `MEMORY.md` (facts/decisions) then this file.
 > Update the **Status** table and **Last updated** date whenever work changes.
 > Last updated: 2026-09-05
+>
+> ⚙️ **Workflow rule (agreed with Jc):** every site change must also update the docs
+> (README/MEMORY/HANDOFF), and GitHub pushes happen **only** when Jc explicitly says
+> "push to github". See "Pending local changes" below for what is NOT yet pushed.
+
+## Pending local changes (not yet pushed)
+
+Last sync with GitHub: commit `fb154d8` (2026-09-05). Uncommitted locally since then:
+
+- `robots.txt` — new: allows all search engines + social/messaging crawlers to index
+- `index.html` — robots meta upgraded to `index, follow, max-image-preview:large`
+- `README.md` — file table now lists `robots.txt`
+- `MEMORY.md` — SEO section updated + "Working agreement" added
+- `HANDOFF.md` — this file
+
+→ Push when Jc says the word.
 
 ## Where the project stands
 

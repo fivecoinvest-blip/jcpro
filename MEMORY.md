@@ -58,9 +58,21 @@ in these languages — a resume listing a stack with an empty/private GitHub wea
 
 ## SEO
 
-- Meta description, Open Graph + Twitter tags, `robots`, `theme-color`, inline SVG favicon,
+- Meta description, Open Graph + Twitter tags, `theme-color`, inline SVG favicon,
   JSON-LD `Person` schema, semantic HTML (`header/main/section/nav/footer`, aria labels).
-- Canonical, `og:url`, and JSON-LD `url` are commented placeholders until Jc has a domain.
+- Meta `robots`: `index, follow, max-image-preview:large` (2026-09-05).
+- `robots.txt` at project root allows all crawlers — search engines (Googlebot, Bingbot,
+  DuckDuckBot, Yandex, Baiduspider, Applebot) plus social/messaging bots (Facebook,
+  Twitterbot, LinkedInBot, WhatsApp, Pinterest, Slack, Discord, Telegram, Instagram).
+- Canonical, `og:url`, and JSON-LD `url` are commented placeholders until Jc has a domain;
+  `robots.txt` has a commented `Sitemap:` line for the same moment.
+
+## Working agreement (2026-09-05)
+
+- **Every change to the site must also be reflected in the docs** (README.md, MEMORY.md,
+  HANDOFF.md) so any session is always up to date.
+- **Never push to GitHub automatically.** Push only when Jc explicitly says
+  "push to github". Docs record what is committed vs. pending in HANDOFF.
 
 ## Engineering conventions
 

@@ -1,0 +1,61 @@
+# robots.txt — Jc | Full-Stack Developer resume site
+# Policy: allow every crawler to access and index the entire site.
+# SEO note: a sitemap.xml can be added once a custom domain is live
+# (see the commented Sitemap line at the bottom).
+
+# ---- All search engines & bots (covers everything not listed below) ----
+User-agent: *
+Allow: /
+
+# ---- Major search engines (explicit, for clarity) ----
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# ---- Social media & messaging crawlers (link previews / unfurl cards) ----
+User-agent: FacebookExternalHit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Pinterest
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+User-agent: Instagram
+Allow: /
+
+# ---- Future: add this line once a domain is live ----
+# Sitemap: https://yourdomain.com/sitemap.xml

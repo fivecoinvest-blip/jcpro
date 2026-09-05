@@ -11,6 +11,7 @@ no external fonts, no build step. Opens offline from disk.
 | File            | Purpose                                                        |
 | --------------- | -------------------------------------------------------------- |
 | `index.html`    | The entire website (single file)                               |
+| `robots.txt`    | Allows all search engines & social crawlers to index the site  |
 | `README.md`     | This overview                                                  |
 | `MEMORY.md`     | Project memory — facts, decisions, conventions (read first)    |
 | `HANDOFF.md`    | Task tracker & handoff state — what's done / what's next       |
