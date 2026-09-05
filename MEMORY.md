@@ -1,0 +1,71 @@
+# MEMORY — Project Memory
+
+> Read this first at the start of every session, then read `HANDOFF.md` for task state.
+> Update this file whenever a decision or fact changes. Last updated: 2026-09-05.
+
+## Who & contact
+
+- Owner prefers to be called **"Jc"** (resume site name: "Jc").
+- Email: **jcbloggerjc@gmail.com**
+- GitHub: **https://github.com/fivecoinvest-blip**
+- Repo for this project: **https://github.com/fivecoinvest-blip/jcpro**
+- **LinkedIn:** not provided yet — button is a `#` placeholder, marked with a `✏️` comment.
+- **Domain:** "later" — all canonical / `og:url` / JSON-LD `url` references are
+  commented out with `✏️` markers until a domain exists.
+
+## The person (resume positioning)
+
+- Full-stack developer: web + iOS/Android apps, backend, databases, REST APIs,
+  servers/deployment, and professional SEO experience.
+- Strong selling point: works effectively **with AI coding agents** — knows how to
+  code, guides AI, reviews/corrects output. Positioning line used on the site:
+  *"AI is not a powerful replacement for programming knowledge — it's a tool that
+  makes a knowledgeable developer more productive."*
+- Covers the whole pipeline: Development → Database → Backend/API → Server →
+  Deployment → Maintenance.
+- Comfortable learning/adapting to any stack; breadth is enabled partly by AI-assisted
+  workflows (recorded honestly in the site's skills lead line).
+
+## Tech stack (confirmed by Jc via questionnaire, 2026-09-05)
+
+- **Languages:** JavaScript, TypeScript, Python, PHP, Java, Go, Swift, Kotlin, SQL, HTML5, CSS3
+- **Frontend & mobile:** React, Next.js, Vue, Angular, Tailwind CSS, iOS (Swift), Android (Kotlin)
+- **Backend & APIs:** Node.js, Express, Laravel, Django, Flask, REST APIs, auth, third-party integrations
+- **Databases:** MySQL, PostgreSQL, MongoDB, Firebase, SQLite, Redis
+- **Infrastructure/tools:** Git & GitHub, Docker, Linux servers, WordPress, DNS, SSL, deployment
+- **AI & SEO:** Cursor, GitHub Copilot, AI coding agents, on-page/technical SEO, Search Console
+
+⚠️ **Credibility caveat (flagged to Jc):** GitHub profile should eventually show code
+in these languages — a resume listing a stack with an empty/private GitHub weakens it.
+
+## Site design decisions
+
+- **Single file** `index.html` (~47 KB) — inline CSS + JS, system font stack, inline SVG
+  icons + favicon. No external requests. This is deliberate (speed-first).
+- **Theme:** dark by default; light/dark toggle in header; saved to `localStorage`;
+  applied via a tiny `<head>` script **before first paint** (no flash).
+- **Colors:** accent gradient cyan→indigo. Dark: `--accent #22d3ee`, `--accent-2 #818cf8`,
+  bg `#070b14`. Light: `#0891b2` / `#6366f1`, bg `#f4f7fb`. All via CSS custom properties.
+- **Aesthetic:** "modern technical" — mono-font labels/numbers, faint grid background,
+  numbered section tags (01–06), chip clouds, gradient text on the hero name,
+  sticky blurred header, scroll progress bar, typewriter line in hero,
+  `prefers-reduced-motion` respected.
+- **Sections & anchors:** `home` (hero), `about`, `services` (6 cards), `process`
+  (6-step pipeline + AI workflow), `ai`, `skills` (6 groups: languages / frontend+mobile /
+  backend+APIs / databases / infrastructure+tools / AI+SEO), `contact`, footer.
+- Skills section was reworked (2026-09-05) from generic capability chips to the concrete
+  stack above; capability details already live in the Services cards (no duplication).
+
+## SEO
+
+- Meta description, Open Graph + Twitter tags, `robots`, `theme-color`, inline SVG favicon,
+  JSON-LD `Person` schema, semantic HTML (`header/main/section/nav/footer`, aria labels).
+- Canonical, `og:url`, and JSON-LD `url` are commented placeholders until Jc has a domain.
+
+## Engineering conventions
+
+- Vanilla JS only, wrapped in an IIFE, `"use strict"`, no dependencies.
+- Comments inside `index.html` use `✏️` to mark every remaining personalization spot.
+- Verification workflow used so far: `node --check`-style syntax validation of inline
+  scripts, `JSON.parse` on the JSON-LD block, tag-balance scan, and headless-Chrome
+  screenshots (see `HANDOFF.md` for the exact command).
